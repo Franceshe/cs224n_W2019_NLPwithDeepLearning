@@ -1,0 +1,27 @@
+Instead of make all functions in a single file, I split them for testing.
+
+-a1
+   -distinct_words
+   |
+   -compute_co_occurrence_matrix
+   |
+   -reduce_to_k_dim
+   |
+   -plot_embeddings
+   |
+   co-Occurrence_plot_analysis
+
+   wor2vect
+   -
+
+
+
+
+
+
+
+
+
+
+
+

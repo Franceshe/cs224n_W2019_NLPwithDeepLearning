@@ -1,5 +1,6 @@
 import numpy as np
 from reduce_to_k_dim import*
+import matplotlib.pyplot as plt
 
 def plot_embeddings(M_reduced, word2Ind, words):
     """ Plot in a scatterplot the embeddings of the words specified in the list "words".
@@ -12,10 +13,34 @@ def plot_embeddings(M_reduced, word2Ind, words):
             words (list of strings): words whose embeddings we want to visualize
     """
 
+    x_coords = M_reduced[:, 0]
+    y_coords = M_reduced[:, 1]
+    
+    for word in words:
+        idx = word2Ind[word]
+        embedding = M_reduced[idx]
+        x = embedding[0]
+        y = embedding[1]
+        
+        plt.scatter(x, y, marker='x', color='red')
+        plt.text(x, y, word, fontsize=9)
+    plt.show()
     # ------------------
     # Write your implementation here.
+    # simulating a pandas df['type'] column
 
+    """
+    types = ['apple', 'orange', 'apple', 'pear', 'apple', 'orange', 'apple', 'pear']
+    x_coords = [10, 10, 5, 4, 3, 20, 19, 21]
+    y_coords = [21, 23, 12, 21, 10, 20, 14, 2]
 
+    for i,type in enumerate(types):
+        x = x_coords[i]
+        y = y_coords[i]
+        plt.scatter(x, y, marker='x', color='red')
+        plt.text(x+0.3, y+0.3, type, fontsize=9)
+    plt.show()
+    """
     # ------------------
 
     # ---------------------
