@@ -3,21 +3,21 @@
 It includes all lab/assignment required in CS224 Winter 2019 Stanford NLP Course
 In addition, I have a personal project based on the guidance provided.
 
-##Personal Project
-* Personal Project Guidence
-* [Personal Project Guidence](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+## Personal Project
+* [Pratical tips for Personal](http://web.stanford.edu/class/cs224n/readings/final-project-practical-tips.pdf/) - Some pratical tips for future NLP realated side projects
 
 
 ### Some useful reference
+* [CS224 HOME](http://web.stanford.edu/class/cs224n/index.html#schedule/)- Homepage for CS224N
 
-### Open Source NLP algorithm package:
+## Open Source NLP algorithm package:
 * stanfordNLP
 * NLTK
 * Apache OpenNL
 * Kaldi HTKHTS
 * Hadoop Mahout word2vec
 
-### Application for NLP tasks:
+## Application for NLP tasks:
 * word segmentation
 * POS tagging
 * named entity recognition
@@ -27,7 +27,7 @@ In addition, I have a personal project based on the guidance provided.
 * keyword tagging
 * automatic summarization
 
-### Neural Network models for NLP
+## Neural Network models for NLP
 * LSTM
 * CNN
 * RNN
