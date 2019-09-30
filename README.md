@@ -35,5 +35,14 @@ In addition, I have a personal project based on the guidance provided.
 * seq2seq
 * BERT
 
+## Chinese NLP package:
+* [Jieba](https://github.com/fxsjy/jieba)
+
+### Jieba - Algorithm:
+* Based on a prefix dictionary structure to achieve efficient word graph scanning. Build a directed acyclic graph (DAG) for all possible word combinations.
+* Use dynamic programming to find the most probable combination based on the word frequency.
+* For unknown words, a HMM-based model is used with the Viterbi algorithm.
+
+
 ## Useful Text for NLP:
 * [Speech and Language Processing (3rd ed. draft) BY Dan Jurafsky and James H. Martin](https://web.stanford.edu/~jurafsky/slp3/) - Great Text !
