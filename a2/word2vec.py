@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+import math
 import numpy as np
 import random
 
@@ -17,7 +17,8 @@ def sigmoid(x):
     """
 
     ### YOUR CODE HERE
-
+    # y=1/(1+e^(-x))
+    s = 1.0/(1 + exp(-x))
     ### END YOUR CODE
 
     return s
@@ -31,7 +32,7 @@ def naiveSoftmaxLossAndGradient(
 ):
     """ Naive Softmax loss & gradient function for word2vec models
 
-    Implement the naive softmax loss and gradients between a center word's 
+    Implement the naive softmax loss and gradients between a center word's
     embedding and an outside word's embedding. This will be the building block
     for our word2vec models.
 
@@ -56,7 +57,7 @@ def naiveSoftmaxLossAndGradient(
 
     ### Please use the provided softmax function (imported earlier in this file)
     ### This numerically stable implementation helps you avoid issues pertaining
-    ### to integer overflow. 
+    ### to integer overflow.
 
 
     ### END YOUR CODE
@@ -105,6 +106,9 @@ def negSamplingLossAndGradient(
     ### YOUR CODE HERE
 
     ### Please use your implementation of sigmoid in here.
+    #softmax
+
+    #negative sampling
 
 
     ### END YOUR CODE
@@ -157,7 +161,7 @@ def skipgram(currentCenterWord, windowSize, outsideWords, word2Ind,
 # Testing functions below. DO NOT MODIFY!   #
 #############################################
 
-def word2vec_sgd_wrapper(word2vecModel, word2Ind, wordVectors, dataset, 
+def word2vec_sgd_wrapper(word2vecModel, word2Ind, wordVectors, dataset,
                          windowSize,
                          word2vecLossAndGradient=naiveSoftmaxLossAndGradient):
     batchsize = 50
@@ -215,7 +219,7 @@ def test_word2vec():
     print ("Your Result:")
     print("Loss: {}\nGradient wrt Center Vectors (dJ/dV):\n {}\nGradient wrt Outside Vectors (dJ/dU):\n {}\n".format(
             *skipgram("c", 3, ["a", "b", "e", "d", "b", "c"],
-                dummy_tokens, dummy_vectors[:5,:], dummy_vectors[5:,:], dataset) 
+                dummy_tokens, dummy_vectors[:5,:], dummy_vectors[5:,:], dataset)
         )
     )
 
@@ -235,7 +239,7 @@ Gradient wrt Outside Vectors (dJ/dU):
  [-0.13638384  0.06258276  0.47605228]]
     """)
 
-    print ("Skip-Gram with negSamplingLossAndGradient")   
+    print ("Skip-Gram with negSamplingLossAndGradient")
     print ("Your Result:")
     print("Loss: {}\nGradient wrt Center Vectors (dJ/dV):\n {}\n Gradient wrt Outside Vectors (dJ/dU):\n {}\n".format(
         *skipgram("c", 1, ["a", "b"], dummy_tokens, dummy_vectors[:5,:],
