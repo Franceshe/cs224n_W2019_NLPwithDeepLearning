@@ -52,3 +52,4 @@ In addition, I have a personal project based on the guidance provided.
 
 ## Useful Text for NLP:
 * [Speech and Language Processing (3rd ed. draft) BY Dan Jurafsky and James H. Martin](https://web.stanford.edu/~jurafsky/slp3/) - Great Text !
+* [Writing Code for NLP Research from Allen Institute](https://www.080910t.com/downloads/Writing%20Code%20for%20NLP%20Research.pdf)
