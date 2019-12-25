@@ -6,6 +6,16 @@ import random
 from utils.gradcheck import gradcheck_naive
 from utils.utils import normalizeRows, softmax
 
+"""
+cs224n:
+-Assignment2:
+Implememt the following functions:
+1.sigmoid function
+2.softmax and negative sampling loss and gradient functions.
+3.loss and gradient functions for the skip-gram model.
+"""
+
+
 
 def sigmoid(x):
     """
