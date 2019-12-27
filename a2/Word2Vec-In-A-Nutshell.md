@@ -7,6 +7,11 @@ Specificly,it is a method in a softwa- re package (see Python below) implementin
 ### Skip-Gram
 
 
+### Traning resut
+iter 40000: 9.812206
+sanity check: cost at convergence should be around or below 10
+training took 3776 seconds
+
 ### Reference:
 1.CS 224n Assignment #2: word2vec
 2. https://drive.google.com/file/d/1Eva0e817NkyfMmpjrEO6APMuvpXLrerx/view
