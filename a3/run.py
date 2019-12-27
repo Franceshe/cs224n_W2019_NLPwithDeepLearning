@@ -45,7 +45,8 @@ def train(parser, train_data, dev_data, output_path, batch_size=1024, n_epochs=1
     ### Please see the following docs for support:
     ###     Adam Optimizer: https://pytorch.org/docs/stable/optim.html
     ###     Cross Entropy Loss: https://pytorch.org/docs/stable/nn.html#crossentropyloss
-
+    optimizer = optim.Adam(parser.model.parameters(), lr=lr)
+    loss_func = nn.CrossEntropyLoss()
 
     ### END YOUR CODE
 
@@ -98,7 +99,11 @@ def train_for_epoch(parser, train_data, dev_data, optimizer, loss_func, batch_si
             ###      4) Take step with the optimizer
             ### Please see the following docs for support:
             ###     Optimizer Step: https://pytorch.org/docs/stable/optim.html#optimizer-step
+            logits = parser.model(train_x)
+            loss = loss_func(logits, train_y)
 
+            loss.backward()
+            optimizer.step()
 
             ### END YOUR CODE
             prog.update(1)
@@ -117,9 +122,10 @@ if __name__ == "__main__":
     # Note: Set debug to False, when training on entire corpus
     debug = True
     # debug = False
-
-    assert(torch.__version__ == "1.0.0"),  "Please install torch version 1.0.0"
-
+    
+    #Changed the code to be compatible with my PyTorch 1.2.0 system
+    #assert(torch.__version__ == "1.0.0"),  "Please install torch version 1.0.0"
+    assert(torch.__version__ == "1.2.0"),  "Please install torch version 1.2.0"
     print(80 * "=")
     print("INITIALIZING")
     print(80 * "=")
